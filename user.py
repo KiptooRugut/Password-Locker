@@ -22,3 +22,13 @@ class User:
         Function to delete user from the user_list
         '''
         User.user_list.remove(self)
+
+    @classmethod
+    def user_exit(cls, username):
+        '''
+        Checks if entered username has an existing account in the user_list
+        '''
+        for user in cls.user_list:
+            if user.username == username:
+                return True
+        return False
