@@ -8,3 +8,17 @@ class TestDetails(unittest.TestCase):
     Args:
          unittest.TestCase: TestCase class that helps in creating test cases
     '''
+    
+    def setUp(self):
+        '''
+        Set up method to run testing each test cases
+        '''
+        self.new_details = Details("Instagrtam", "Miguel", "Limits454")
+        
+    def test_init(self):
+        '''
+            test_init test case checks if the details object has been created.
+        '''
+        self.assertEqual(self.new_details.account_socialmedia, "Instagram")
+        self.assertEqual(self.new_details.user_name, "Miguel")
+        self.assertEqual(self.new_details.user_password, "Limits454")
