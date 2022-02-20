@@ -43,7 +43,7 @@ class Details:
         
 
         Args:
-            account_name: account_name to search if it exists
+            account_name: account_name to search
         Return : 
             Details that matches the account_name
         '''
@@ -51,4 +51,18 @@ class Details:
         for details in cls.user_details:
             if details.account_name == account_name:
                 return details
+        return False
+
+    @classmethod
+    def details_exist(cls, account_name):
+        '''
+        Method that checks if details exists from the user_details list.
+        Args:
+            account_name: account_name to search for if it exists
+        Returns :
+            Boolean: True or false depending if the user_details exists
+        '''
+        for details in cls.user_details:
+            if details.account_name == account_name:
+                return True
         return False
