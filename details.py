@@ -66,3 +66,10 @@ class Details:
             if details.account_name == account_name:
                 return True
         return False
+
+    @classmethod
+    def display_details(cls):
+        '''
+        Method that returns and display details from user_details list
+        '''
+        return cls.user_details
