@@ -1,6 +1,4 @@
 from distutils.log import error
-from msilib.schema import Error
-from xml.dom.pulldom import ErrorHandler
 
 
 class User:
@@ -48,3 +46,12 @@ class User:
                 return user
         return error
 
+    @classmethod
+    def user_authentication(cls, username, password):
+        '''
+        Checks if inputted user information matches the information in the user_list
+        '''
+        user = cls.find_user(username)
+        if user.username == username and user.password == password:
+                return True
+        return False
