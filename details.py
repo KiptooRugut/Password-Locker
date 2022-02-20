@@ -1,6 +1,6 @@
-from ast import Return
-from re import search
-from tkinter.messagebox import RETRY
+import imp
+import random
+import string
 
 
 class Details:
@@ -73,3 +73,13 @@ class Details:
         Method that returns and display details from user_details list
         '''
         return cls.user_details
+
+
+    @classmethod
+    def generate_password(cls, length):
+        '''
+          Method that lays a blueprint of what is required for a strong password and enables the user to generate a password for use in the new account.  
+        '''
+        passcode = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*<?>"
+
+        return ''.join(random.choice(passcode) for i in range(length))
