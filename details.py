@@ -1,3 +1,8 @@
+from ast import Return
+from re import search
+from tkinter.messagebox import RETRY
+
+
 class Details:
     '''
     Class that generates new instances of details
@@ -29,3 +34,21 @@ class Details:
         '''
         
         Details.user_details.remove(self)
+
+
+    @classmethod
+    def find_by_account_name(cls, account_name):
+        '''
+        A method that processes an inputted account_name and returns details that matches the account_name
+        
+
+        Args:
+            account_name: account_name to search if it exists
+        Return : 
+            Details that matches the account_name
+        '''
+
+        for details in cls.user_details:
+            if details.account_name == account_name:
+                return details
+        return False
