@@ -22,3 +22,9 @@ class TestDetails(unittest.TestCase):
         self.assertEqual(self.new_details.account_socialmedia, "Instagram")
         self.assertEqual(self.new_details.user_name, "Miguel")
         self.assertEqual(self.new_details.user_password, "Limits454")
+
+    def tearDown(self):
+        '''
+            tearDown method cleans up after each test case has run.
+        '''
+        Details.user_details = []
