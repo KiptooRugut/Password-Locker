@@ -12,7 +12,7 @@ class Details:
         self.user_name = user_name
         self.user_password = user_password
 
-        # save_details method called upon on a details object and appends it to the details_list
+        # save_details function called upon on a details object and appends it to the details_list
         
     def save_details(self):
         '''
@@ -20,3 +20,12 @@ class Details:
         '''
 
         Details.user_details.append(self)
+
+        # delete_details function called upon on details object and removes it from the details_list
+
+    def delete_details(self):
+        '''
+            Function to delete saved detail from the user_details.
+        '''
+        
+        Details.user_details.remove(self)
