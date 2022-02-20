@@ -1,4 +1,3 @@
-import imp
 import random
 import string
 
@@ -9,11 +8,11 @@ class Details:
     '''
     user_details = [] # Empty details list
 
-    def __init__(self, account_name ,user_name, user_password):
+    def __init__(self, account_socialmedia ,user_name, user_password):
 
         # docstring removed for simplicity
 
-        self.account_name = account_name
+        self.account_socialmedia = account_socialmedia
         self.user_name = user_name
         self.user_password = user_password
 
@@ -37,33 +36,33 @@ class Details:
 
 
     @classmethod
-    def find_by_account_name(cls, account_name):
+    def find_by_account_socialmedia(cls, account_socialmedia):
         '''
-        A method that processes an inputted account_name and returns details that matches the account_name
+        A method that processes an inputted account_socialmedia and returns details that matches the account_name
         
 
         Args:
-            account_name: account_name to search
+            account_socialmedia: account_socialmedia to search
         Return : 
-            Details that matches the account_name
+            Details that matches the account_socialmedia
         '''
 
         for details in cls.user_details:
-            if details.account_name == account_name:
+            if details.account_socialmedia == account_socialmedia:
                 return details
         return False
 
     @classmethod
-    def details_exist(cls, account_name):
+    def details_exist(cls, account_socialmedia):
         '''
         Method that checks if details exists from the user_details list.
         Args:
-            account_name: account_name to search for if it exists
+            account_socialmedia: account_socialmedia to search for if it exists
         Returns :
             Boolean: True or false depending if the user_details exists
         '''
         for details in cls.user_details:
-            if details.account_name == account_name:
+            if details.account_socialmedia == account_socialmedia:
                 return True
         return False
 
