@@ -40,8 +40,8 @@ As a user, i want to :
 | Open the application on the terminal | Run the command **./run.py** | Hello Welcome to your password locker!Proceed to create your account |
 | Create a username and password        | Enter a username of your choice and password     | Hello **username**,Account created succesfully! Your password is:**password**|
 | Proceed to login |   Enter your **username** and **password** | Welcome: **username** to your account |
-| Create new detail | Enter **cc** | Enter account name and username then enter **cp** to create your own password or **gp** to get a system generated password where you'll have to specify length of the password you need | New detail **Account name**, **Username**,**Password** |
-| Display stored details       |           Enter ***dc***         | A list of all details that has been stored or It shows that you don't have any details saved yet|
+| Create new detail | Enter **cd** | Enter account name and username then enter **cp** to create your own password or **gp** to get a system generated password where you'll have to specify length of the password you need | New detail **Account name**, **Username**,**Password** |
+| Display stored details       |           Enter ***dd***         | A list of all details that has been stored or It shows that you don't have any details saved yet|
 | Delete an existing detail that you no longer need| Enter **del** |Enter the account name of the Detail you want to delete and returns true if the it has been deleted and false if it doesn't exist|
 |  Exit the application                |              Enter **ex**       | Exits the application |
 
