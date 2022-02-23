@@ -10,7 +10,7 @@ def function():
 	print("            | |    / (_|  \ \  \__  \ \__    | |___   | (_)  |  |  |___  | |/\ \   ((___))  | |_) )    ")
 	print("            |_|    \_____ / /___ /   /___/   |_____)   \____/    \_____| |_|  \_\  ((____   |_|  \_\   ")
 function()
-
+print("\n")
 
 def create_new_user(user_name,user_password):
     """
@@ -187,7 +187,7 @@ def main():
             elif short_code == "del":
 
 
-                print("Enter account name of the Details you want to delete")
+                print("Enter account Details you want to delete")
 
                 search_account_socialmedia = input()
                 if find_details(search_account_socialmedia):
